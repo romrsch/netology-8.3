@@ -1,6 +1,5 @@
-# Warning: This file is Ansible Managed, manual changes will be overwritten on next playbook run.
-#!/usr/bin/env bash
+network.host: 0.0.0.0
+elasticsearch.hosts: ["http://{{ hostvars['el-instance'] ['ansible_facts']['default_ipv4']['address'] }}:9200"]
+kibana.index: ".kibana"
 
-export KIBANA_HOME={{ kibana_home }}
-export PATH=$PATH:$KIBANA_HOME/bin
 
